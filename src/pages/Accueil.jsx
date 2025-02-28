@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import Competences from "./MesCompetences";
+
 
 const mobile = "/assets/hero-bg-mobile.jpg";
 const tablette = "/assets/hero-bg-tablette.jpg";
@@ -64,7 +66,13 @@ function Accueil() {
           </Row>
         </Container>
       </section>
-      <div>
+      <div 
+      style={{ 
+        margin: '40px', 
+        padding: '30px', 
+        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.3)",
+        display: 'flex' 
+      }} >
         <section>
           <h2>À propos</h2>
           <p>
@@ -78,10 +86,7 @@ function Accueil() {
         </p>
         </section>
         <div>
-          <h3>Mes compétences</h3>
-          <ul>
-
-          </ul>
+          <Competences />
         </div>
       </div>
     </>
