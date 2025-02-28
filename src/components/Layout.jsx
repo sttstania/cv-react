@@ -6,7 +6,7 @@ function Layout() {
   return (
     <>
       <Header />
-      <main style={{padding: "80px"}}>
+      <main >
         <Outlet />
       </main>
       <Footer />

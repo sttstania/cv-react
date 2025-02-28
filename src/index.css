@@ -1,9 +1,20 @@
+/* Importation de la police Nunito Sans */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;  /* Police par défaut */
   line-height: 1.5;
   font-weight: 400;
-  color: #444;
-  background-color: #EEE;
+  color: #444;  /* Couleur du texte */
+  background-color: #EEE;  /* Couleur de fond */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -15,4 +26,55 @@ body, html {
   padding: 0;
   height: 100%;
   width: 100%;
+  background-color: #EEE;  /* Fond clair */
+  color: #444;  /* Texte principal */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1e1e1e;  /* Couleur des titres */
+  font-weight: 600;  /* Poids de la police pour les titres */
+}
+
+strong {
+  color: #000000;  /* Texte fort en noir */
+}
+
+button {
+  background-color: #0d6efd;  /* Couleur du fond des boutons */
+  color: #FFF;  /* Texte des boutons en blanc */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;  /* Couleur du fond du bouton au survol */
+}
+
+a {
+  color: #444;  /* Couleur des liens */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0d6efd;  /* Couleur des liens au survol */
+}
+
+footer {
+  background-color: #EEE;  /* Fond du pied de page */
+  color: #444;  /* Texte du pied de page */
+  padding: 20px;
+}
+
+footer h5 {
+  color: #1e1e1e;  /* Couleur des titres dans le footer */
+}
+
+footer a {
+  color: #1e1e1e;  /* Couleur des liens dans le footer */
+}
+
+footer a:hover {
+  color: #0d6efd;  /* Couleur des liens au survol dans le footer */
 }
