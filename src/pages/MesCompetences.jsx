@@ -11,19 +11,33 @@ function Competences() {
 
     return (
         <Container>
-            <h3 style={{ textAlign: 'center', marginBottom: '20px' }}>Mes compétences</h3>
+            <div style={{ borderRadius: "15px", overflow: "hidden" }}>
+                <img 
+                    src="/assets/about.jpg" 
+                    alt="photo_about_me"
+                    style={{
+                        height: "330px",  
+                        width: "100%",   
+                        objectFit: "cover",  //couvre toute la zone sans déformation
+                        objectPosition: "center -20px",  // Décale l'image vers le bas, coupant 20px du bas
+                    }} 
+                />
+            </div>
+            <h3 style={{ textAlign: 'left', marginBottom: '20px' }}>Mes compétences</h3>
             {competences.map((competence, index) => (
-                <div key={index} style={{ marginBottom: '15px', display: 'flex', alignItems: 'center' }}>
-                    <label style={{ fontWeight: 'bold', flex: 1 }}>
-                        {competence.label}
-                    </label>
-                    <span style={{ marginLeft: '10px', fontWeight: 'bold', flex: 0 }}>
-                        {competence.value}%
-                    </span>
+                <div key={index} style={{ marginBottom: '20px', textAlign: 'left' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+                        <label style={{ fontWeight: 600 }}>
+                            {competence.label}
+                        </label>
+                        <span style={{ fontWeight: 600, marginLeft: '10px' }}>
+                            {competence.value}%
+                        </span>
+                    </div>
                     <ProgressBar
                         now={competence.value}
                         variant={competence.color}
-                        style={{ height: '25px', borderRadius: '30px', flex: 2, marginLeft: '10px' }}
+                        style={{ height: '15px', borderRadius: '30px' }}
                     />
                 </div>
             ))}
