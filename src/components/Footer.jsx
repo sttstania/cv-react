@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -27,11 +27,11 @@ function Footer() {
   };
 
   return (
-    <footer style={{ backgroundColor: "#EEE", color: "#444", padding: "20px 0" }}>
+    <footer style={{ backgroundColor: "#EEE", color: "#444", padding: "20px 0", margin: "20px"}}>
       <Container>
-        <Row style={{ display: "flex", alignItems: "stretch" }}>
+        <div className="d-flex flex-wrap">
           {/* Première colonne: informations personnelles */}
-          <Col md={6} lg={3} className="mt-md-4 mt-lg-0">
+          <div className="col-md-6 col-lg-3 mt-md-4 mt-lg-0">
             <h5 style={{ color: "#1e1e1e" }}>John Doe</h5>
             <p>40 Rue Laure Diebold,<br />69009 Lyon, France<br />Téléphone: 06 20 30 40 50</p>
             <div>
@@ -48,9 +48,9 @@ function Footer() {
                 <i className="fab fa-linkedin fa-2x"></i>
               </a>
             </div>
-          </Col>
+          </div>
           {/* Deuxième colonne: Liens utiles */}
-          <Col md={6} lg={3} className="mt-md-4 mt-lg-0">
+          <div className="col-md-6 col-lg-3 mt-md-4 mt-lg-0">
             <h5 style={{ color: "#1e1e1e" }}>Liens utiles</h5>
             <ul style={{ listStyleType: "none", padding: 0 }}>
               <li>
@@ -74,9 +74,9 @@ function Footer() {
                 <NavLink to="/MentionsLegales" style={{ color: "#444", textDecoration: "none" }}>Mentions Légales</NavLink>
               </li>
             </ul>
-          </Col>
+          </div>
           {/* Troisième colonne: Réalisations */}
-          <Col md={6} lg={3} className="mt-md-4 mt-lg-0">
+          <div className="col-md-6 col-lg-3 mt-md-4 mt-lg-0">
             <h5 style={{ color: "#1e1e1e" }}>Dernières Réalisations</h5>
             <ul style={{ listStyleType: "none", padding: 0 }}>
               <li>
@@ -92,9 +92,9 @@ function Footer() {
                 <a href="#" style={{ color: "#444", textDecoration: "none" }}>Espace bien-être</a>
               </li>
             </ul>
-          </Col>
+          </div>
           {/* Quatrième colonne: Articles */}
-          <Col md={6} lg={3} className="mt-md-4 mt-lg-0">
+          <div className="col-md-6 col-lg-3 mt-md-4 mt-lg-0">
             <h5 style={{ color: "#1e1e1e" }}>Mes derniers articles</h5>
             <ul style={{ listStyleType: "none", padding: 0 }}>
               <li>
@@ -110,30 +110,37 @@ function Footer() {
                 <a href="#" style={{ color: "#444", textDecoration: "none" }}>Se positionner sur Google</a>
               </li>
             </ul>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Container>
 
       {/* bouton pour remonter en haut */}
-      <div style={{ backgroundColor: "##0d6efd", color: "#EEE", textAlign: "center", padding: "10px 0", width: "100vw", marginTop: "20px" }}>
+      <div style={{ backgroundColor: "#1e1e1e", color: "#EEE", textAlign: "center", padding: "10px 0", width: "100vw", marginTop: "20px" }}>
         <p style={{ margin: 0 }}>&copy; Design by John Doe</p>
-        {showScroll && (
-          <button 
-            onClick={scrollToTop} 
-            style={{ 
-              backgroundColor: "##298eff", 
-              color: "#EEE", 
-              border: "none", 
-              padding: "12px 20px", 
-              cursor: "pointer", 
-              marginTop: "10px",
-              borderRadius: "5px"
-            }}
-          >
-            Remonter en haut
-          </button>
-        )}
       </div>
+
+      {showScroll && (
+        <button
+          onClick={scrollToTop}
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            backgroundColor: "#298eff",
+            color: "#EEE",
+            border: "none",
+            padding: "12px",
+            cursor: "pointer",
+            borderRadius: "50%",
+            zIndex: 1000,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+          }}
+        >
+          <i className="fas fa-arrow-up"></i>
+        </button>
+      )}
     </footer>
   );
 }
