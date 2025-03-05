@@ -64,23 +64,46 @@ function Accueil() {
         </div>
       </section>
       {showAPropos && (
-        <Container id="a-propos" style={{ marginTop: "40px", padding: "30px" }}>
-          <h2>À propos</h2>
-          <div style={{ width: "50px", height: "4px", backgroundColor: "#0d6efd", margin: "8px 0 20px 0" }}></div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-            <div style={{ flex: 1 }}>
-              <p>
-                Passionné par l&apos;informatique et les nouvelles technologies, j&apos;ai suivi une formation d&apos;
-                <strong>intégrateur-développeur web</strong> au CESI. Au cours de cette formation, j&apos;ai acquis des bases solides pour travailler dans le domaine du <strong>développement web.</strong>
-              </p>
-              <p>
-                Basé à Lyon, je suis en recherche d&apos;une alternance au sein d&apos;une agence digitale pour construire mon expérience en tant que <strong>développeur web full stack.</strong>
-              </p>
-              <p>
-                J&apos;accorde une attention particulière à la qualité du code que j&apos;écris et je respecte les bonnes pratiques du web.
-              </p>
+        <Container
+          id="a-propos"
+          style={{
+            marginTop: "40px",
+            padding: "30px",
+            background: "linear-gradient(to bottom, #FFF, #EEE)", // Dégradé subtil pour un effet plus blanc
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1)", // Ombre pour l'effet "levé"
+            borderRadius: "8px", // Optionnel : arrondit les coins
+          }}
+        >
+          <div className="d-md-flex">
+            <div className="w-100 w-md-50 me-md-4 mb-4 mb-md-0">
+              <h2 style={{ position: "relative" }}>
+                À propos
+                <div
+                  style={{
+                    width: "100%",
+                    height: "4px",
+                    backgroundColor: "#0d6efd",
+                    margin: "8px 0 20px 0",
+                    position: "absolute",
+                    left: 0,
+                    bottom: "-24px", // Ajustez cette valeur pour positionner la ligne
+                  }}
+                ></div>
+              </h2>
+              <div>
+                <p>
+                  Passionné par l&apos;informatique et les nouvelles technologies, j&apos;ai suivi une formation d&apos;
+                  <strong>intégrateur-développeur web</strong> au CESI. Au cours de cette formation, j&apos;ai acquis des bases solides pour travailler dans le domaine du <strong>développement web.</strong>
+                </p>
+                <p>
+                  Basé à Lyon, je suis en recherche d&apos;une alternance au sein d&apos;une agence digitale pour construire mon expérience en tant que <strong>développeur web full stack.</strong>
+                </p>
+                <p>
+                  J&apos;accorde une attention particulière à la qualité du code que j&apos;écris et je respecte les bonnes pratiques du web.
+                </p>
+              </div>
             </div>
-            <div style={{ flex: 1 }}>
+            <div className="w-100 w-md-50">
               <Competences />
             </div>
           </div>

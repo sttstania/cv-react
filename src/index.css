@@ -26,7 +26,7 @@ body, html {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: #EEE;  /* Fond clair */
+  background-color: #EEE; 
   color: #444;  /* Texte principal */
 }
 
@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
 strong {
   color: #000000;  /* Texte fort en noir */
+  font-weight: 600; /* Poids de la police pour les strongs */
 }
 
 button {
