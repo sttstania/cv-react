@@ -126,7 +126,7 @@ function Footer() {
             position: 'fixed',
             bottom: '20px',
             right: '20px',
-            backgroundColor: "#298eff",
+            backgroundColor: "#298eff",  // Couleur de fond par défaut
             color: "#EEE",
             border: "none",
             padding: "12px",
@@ -135,8 +135,11 @@ function Footer() {
             zIndex: 1000,
             display: "flex",
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
+            transition: "background-color 0.3s ease"  // Transition pour le changement de couleur
           }}
+          onMouseEnter={(e) => e.target.style.backgroundColor = '#1e75d8'}  // Couleur au survol
+          onMouseLeave={(e) => e.target.style.backgroundColor = '#298eff'}  // Retour à la couleur initiale
         >
           <i className="fas fa-arrow-up"></i>
         </button>

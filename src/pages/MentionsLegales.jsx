@@ -1,4 +1,9 @@
 import { Container, Accordion } from "react-bootstrap";
+import { MdPlace } from "react-icons/md";
+import { IoIosPhonePortrait } from "react-icons/io";
+import { IoMdMail } from "react-icons/io";
+import { FaGlobe } from "react-icons/fa6";
+
 
 const MentionsLegales = () => {
   return (
@@ -20,9 +25,9 @@ const MentionsLegales = () => {
           <Accordion.Header>Éditeur du site</Accordion.Header>
           <Accordion.Body>
             <p><strong>John Doe</strong></p>
-            <p>40 Rue Laure Diebold <br />69009 Lyon, France</p>
-            <p>📞 <a href="tel:+33620304050" style={{ color: "#0d6efd" }}>06 20 30 40 50</a></p>
-            <p>✉️ <a href="mailto:john.doe@gmail.com" style={{ color: "#0d6efd" }}>john.doe@gmail.com</a></p>
+            <p><MdPlace />40 Rue Laure Diebold <br />69009 Lyon, France</p>
+            <p><IoIosPhonePortrait /><a href="tel:+33620304050" style={{ color: "#0d6efd" }}>06 20 30 40 50</a></p>
+            <p><IoMdMail /><a href="mailto:john.doe@gmail.com" style={{ color: "#0d6efd" }}>john.doe@gmail.com</a></p>
           </Accordion.Body>
         </Accordion.Item>
 
@@ -31,7 +36,7 @@ const MentionsLegales = () => {
           <Accordion.Body>
             <p><strong>Always Data</strong></p>
             <p>91 rue du Faubourg Saint Honoré<br />75008 Paris</p>
-            <p>🌐 <a href="https://www.alwaysdata.com" style={{ color: "#0d6efd" }}>www.alwaysdata.com</a></p>
+            <p><FaGlobe /> <a href="https://www.alwaysdata.com" style={{ color: "#0d6efd" }}>www.alwaysdata.com</a></p>
           </Accordion.Body>
         </Accordion.Item>
 

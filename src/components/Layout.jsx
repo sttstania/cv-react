@@ -1,15 +1,18 @@
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Outlet } from "react-router-dom";
 
 function Layout() {
+  const [MontrerAPropos, setShowAPropos] = useState(false);
+
   return (
     <>
       <Header />
-      <main >
-        <Outlet />
+      <main>
+        <Outlet context={{ MontrerAPropos, setShowAPropos }} />
       </main>
-      <Footer />
+      <Footer setShowAPropos={setShowAPropos} />
     </>
   );
 }
