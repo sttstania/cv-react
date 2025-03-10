@@ -33,7 +33,6 @@ body, html {
 h1, h2, h3, h4, h5, h6 {
   color: #1e1e1e;  /* Couleur des titres */
   font-weight: 600;  /* Poids de la police pour les titres */
-  
 }
 
 h1 {
@@ -58,15 +57,20 @@ button:hover {
   background-color: #0056b3;  /* Couleur du fond du bouton au survol */
 }
 
+/* Liens */
 a {
   color: #444;  /* Couleur des liens */
   text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;  /* Transition fluide */
 }
 
 a:hover {
   color: #0d6efd;  /* Couleur des liens au survol */
+  background-color: rgba(255, 255, 255, 0.8);  /* Fond blanc avec opacité 0.8 au survol */
+  border-radius: 3px;  /* Optionnel : pour arrondir les bords */
 }
 
+/* Footer */
 footer {
   background-color: #EEE;  /* Fond du pied de page */
   color: #444;  /* Texte du pied de page */
@@ -83,4 +87,13 @@ footer a {
 
 footer a:hover {
   color: #0d6efd;  /* Couleur des liens au survol dans le footer */
+}
+
+/* Change la couleur de l'icône au survol de la carte */
+.card:hover .icon {
+  color: #cde1f8; /* Couleur de l'icône au survol */
+}
+
+.card .icon {
+  transition: color 0.3s ease; /* Transition fluide pour l'effet */
 }
