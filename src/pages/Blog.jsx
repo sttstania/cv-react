@@ -1,5 +1,5 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import Banner from "./Banner";  
+import Banner from "./banner";  
 
 // Liste des articles
 const articles = [
