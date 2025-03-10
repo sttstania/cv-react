@@ -2,9 +2,9 @@
 function Service () {
     return (
         <>
-    <p>hello Service</p>
+    <p>hello Services</p>
     </>
     )
-}
-
-export default Service
+  }
+  
+  export default Service

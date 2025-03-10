@@ -46,8 +46,8 @@ function Accueil() {
         }}
       >
         <div>
-          <h1 style={{ fontSize: "2.5rem", fontWeight: "bold", color: "#EEE" }}>
-            Bonjour, je suis John Doe
+          <h1 style={{ fontSize: "2.5rem", fontWeight: "bold", color: "#EEE", textTransform: "none" }}>
+            Bonjour, je suis John Doe          
           </h1>
           <h2 style={{ fontSize: "1.5rem", marginBottom: "20px", color: "#EEE" }}>
             Développeur web full stack
