@@ -10,6 +10,15 @@ const Services = () => {
         <p className="text-center text-muted mb-4">
             Voici les prestations sur lesquelles je peux intervenir.
         </p>
+         {/* Ligne de séparation */}
+        <div 
+            style={{
+            width: "20%",
+            height: "4px",
+            backgroundColor: "#0d6efd",
+            margin: "24px auto"
+            }}
+        ></div>
         <Row className="justify-content-center">
             {/* UX Design */}
             <Col xs={12} md={6} lg={4} className="mb-4">
