@@ -1,10 +1,7 @@
-
-function GitHub () {
+function GitHub() {
     return (
-        <>
-    <p>hello GitHub</p>
-    </>
-    )
+        <p>GitHub</p>
+    );
 }
 
-export default GitHub
+export default GitHub;
